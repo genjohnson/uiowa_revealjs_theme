@@ -1,0 +1,71 @@
+/**
+ * University of Iowa theme for reveal.js.
+ *
+ * Based on the 'black' theme by Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,600);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #000;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 42px;
+$mainFont: 'Montserrat', Helvetica, sans-serif;
+$headingFont: 'Montserrat', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #ffcd00;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+$selectionColor: #000;
+
+$heading1Size: 1.9em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #000;
+  }
+}
+
+.reveal .fancy-title h1,
+.reveal .fancy-title h2 {
+  padding-bottom: 0.4em;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 37.5%;
+    bottom: 0;
+    width: 25%;
+    border-bottom: 4px solid #ffcd00;
+  }
+}
+
+.reveal blockquote {
+  border-left: 4px solid #ffcd00;
+  padding-left: 20px !important;
+  text-align: left;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
